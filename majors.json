@@ -1,0 +1,7 @@
+
+
+ majors ={
+  Physics: {Courses: ["PHYS 208",	"PHYS 301",	"PHYS 320",	"PHYZ 320",	"PHYS 340",	"PHYS 376",	"PHYS 380", "PHYS 450",	"PHYS 490", "HUMS 202",	"MATH 200",	"MATH 201",	"MATH 301",	"MATH 307",	"PHYS 207",	"PHYS 211",	"PHYS 302",	"PHYS 325"]},
+  Mathematics_Concentration_GeneralMathematicalSciences: {Courses: ["MATH 201", "MATH 307", "MATH 310", "MATH 300", "MATH 407", "MATH 490", "MATH 255", "MATH 301", "HUMS 202", "MATH 200", "STAT 212", "PHYS 207", "PHYS 208"]},
+  GenEd: {Courses: ["UNIV 111",	"UNIV 112", "UNIV 200",	"CREA 201",	"ECON 205",	"ENGL 215"]}
+}

@@ -1,0 +1,452 @@
+ 
+ let classes = {
+  "MATH 200": {
+    courseName: "Calculus with Analytic Geometry I",
+    credits: 4.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "MATH 201": {
+    courseName: "Calculus with Analytic Geometry II",
+    credits: 4.0,
+    prerequisites: ["MATH 200"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "MATH 301": {
+    courseName: "Differential Equations",
+    credits: 3.0,
+    prerequisites: ["MATH 201"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "MATH 307": {
+    courseName: "Multivariate Calculus",
+    credits: 4.0,
+    prerequisites: ["MATH 201"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 207": {
+    courseName: "University Physics I",
+    credits: 5.0,
+    prerequisites: ["MATH 200"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "HONR 200": {
+    courseName: "Rhetoric",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "HONR 250": {
+    courseName: "Expository Writing",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "HONR 170": {
+    courseName: "Humans of RVA and VCU",
+    credits: 1.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "HONR 171": {
+    courseName: "Investigative Inquiry in RVA",
+    credits: 1.0,
+    prerequisites: ["HONR 170"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "HONR 150": {
+    courseName: "Flourishing",
+    credits: 1.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "STAT 212": {
+    courseName: "Concepts of Statistics",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "RELS 108": {
+    courseName: "Human Spirituality",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "ECON 205": {
+    courseName: "The Economics of Product Development and Markets",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "EGMN 111": {
+    courseName: "Great Inventions: How They Work and Their Impact on Society",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "BIOL 151": {
+    courseName: "Introduction to Biological Sciences I",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "BIOZ 151": {
+    courseName: "Introduction to Biological Science Laboratory I",
+    credits: 1.0,
+    prerequisites: [],
+    corequisites: ["BIOL 151"],
+    minSemester: 0,
+    passed: false
+  },
+  "BIOL 152": {
+    courseName: "Introduction to Biological Sciences II",
+    credits: 3.0,
+    prerequisites: ["BIOL 151"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "BIOZ 152": {
+    courseName: "Introduction to Biological Science Laboratory II",
+    credits: 1.0,
+    prerequisites: [],
+    corequisites: ["BIOL 152"],
+    minSemester: 0,
+    passed: false
+  },
+  "CHEM 101": {
+    courseName: "General Chemistry I",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "CHEZ 101": {
+    courseName: "General Chemistry Laboratory I",
+    credits: 1.0,
+    prerequisites: [],
+    corequisites: ["CHEM 101"],
+    minSemester: 0,
+    passed: false
+  },
+  "CHEM 102": {
+    courseName: "General Chemistry II",
+    credits: 3.0,
+    prerequisites: ["CHEM 101"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "CHEZ 102": {
+    courseName: "General Chemistry Laboratory II",
+    credits: 1.0,
+    prerequisites: [],
+    corequisites: ["CHEM 102"],
+    minSemester: 0,
+    passed: false
+  },
+  "CMSC 255": {
+    courseName: "Introduction to Programming",
+    credits: 4.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "ARTS 100": {
+    courseName: "School of Arts Credit",
+    credits: 1.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 201": {
+    courseName: "General Physics I",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "HIST 103": {
+    courseName: "Survey of American History I",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "HIST 104": {
+    courseName: "Survey of American History II",
+    credits: 3.0,
+    prerequisites: ["HIST 103"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "HONR XX1": {
+    courseName: "Course of Intention",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 2,
+    passed: false
+  },
+  "HONR XX2": {
+    courseName: "Course of Intention",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 2,
+    passed: false
+  },
+  "HONR XX3": {
+    courseName: "Course of Intention",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 2,
+    passed: false
+  },
+  "MGMT 310": {
+    courseName: "Managing People in Organizations",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 208": {
+    courseName: "University Physics II",
+    credits: 5.0,
+    prerequisites: ["PHYS 207"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 301": {
+    courseName: "Classical Mechanics",
+    credits: 3.0,
+    prerequisites: ["PHYS 208", "MATH 301", "MATH 307"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 320": {
+    courseName: "Modern Physics",
+    credits: 3.0,
+    prerequisites: ["PHYS 208", "MATH 301", "MATH 307"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 376": {
+    courseName: "Electromagnetism I",
+    credits: 3.0,
+    prerequisites: ["MATH 301", "PHYS 301"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 380": {
+    courseName: "Quantum Physics I",
+    credits: 3.0,
+    prerequisites: ["MATH 301", "PHYS 320", "PHYS 301"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYZ 320": {
+    courseName: "Modern Physics Lab",
+    credits: 1.0,
+    prerequisites: [],
+    corequisites: ["PHYS 320"],
+    minSemester: 0,
+    passed: false
+  },
+  "MATH 310": {
+    courseName: "Linear Algebra",
+    credits: 3.0,
+    prerequisites: ["MATH 201"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "MATH 300": {
+    courseName: "Intro to Mathematical Reasoning",
+    credits: 3.0,
+    prerequisites: ["MATH 201"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "MATH 407": {
+    courseName: "Real Analysis",
+    credits: 3.0,
+    prerequisites: ["MATH 300"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "MATH 490": {
+    courseName: "Mathematical Expositions",
+    credits: 3.0,
+    prerequisites: ["MATH 300"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "CMSC 245": {
+    courseName: "Introduction to Programming Using C++",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "MATH 4X1": {
+    courseName: "High Level MATH/STAT/OPER Course",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 4,
+    passed: false
+  },
+  "MATH 4X2": {
+    courseName: "High Level MATH/STAT/OPER Course",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 4,
+    passed: false
+  },
+  "ENGR 395": {
+    courseName: "Professional Development",
+    credits: 1.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 340": {
+    courseName: "Statistical Mechanics and Thermodynamics",
+    credits: 3.0,
+    prerequisites: ["ATH301", "PHYS301"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 450": {
+    courseName: "Senior Physics Laboratory",
+    credits: 3.0,
+    prerequisites: ["HYZ320", "HYS320", "PHYS301"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 490": {
+    courseName: "Seminar in Conceptual Physics",
+    credits: 1.0,
+    prerequisites: ["HYZ320", "HYS380", "HYS376", "PHYS340"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "HUMS 202": {
+    courseName: "Choices in a Consumer Society",
+    credits: 1.0,
+    prerequisites: [],
+    corequisites: ["NIV112", "UNIV111"],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 211": {
+    courseName: "Physical Analysis",
+    credits: 3.0,
+    prerequisites: ["HYS208", "MATH201"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "PHYS 325": {
+    courseName: "Visualization of Physics Using Mathematica",
+    credits: 3.0,
+    prerequisites: ["ATH307", "PHYS208"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "UNIV 111": {
+    courseName: "Focused Inquiry I, 2",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "UNIV 112": {
+    courseName: "Focused Inquiry II 1, 2",
+    credits: 3.0,
+    prerequisites: ["UNIV111"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "UNIV 200": {
+    courseName: "Advanced Focused Inquiry",
+    credits: 3.0,
+    prerequisites: ["UNIV200"],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "CREA 201": {
+    courseName: "The Creative Economy",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  },
+  "ENGL 215": {
+    courseName: "Reading Literature",
+    credits: 3.0,
+    prerequisites: [],
+    corequisites: [],
+    minSemester: 0,
+    passed: false
+  }
+}
+
